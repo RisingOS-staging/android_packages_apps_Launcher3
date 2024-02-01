@@ -15,12 +15,18 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Recents overview -->
+    <dimen name="recents_view_icon_size_height">42dp</dimen>
+    <dimen name="recents_view_icon_size_width">60dp</dimen>
+    <dimen name="custom_overview_actions_height">112dp</dimen>
+    <dimen name="overview_clear_all_container_height">48dp</dimen>
+    <dimen name="overview_clear_all_container_margin_bottom">9dp</dimen>
 
      <!-- Meminfo in overview -->
-    <dimen name="meminfo_bottom_margin_gesture">15dp</dimen>
+    <dimen name="meminfo_bottom_margin_gesture">0dp</dimen>
     <dimen name="meminfo_bottom_margin_transient_taskbar">96dp</dimen>
     <dimen name="meminfo_bottom_margin_three_button">15dp</dimen>
-    <dimen name="meminfo_top_margin">12dp</dimen>
+    <dimen name="meminfo_top_margin">0dp</dimen>
 
     <!-- QuickSpace -->
     <dimen name="quickspace_title_size">20sp</dimen>
@@ -32,6 +38,6 @@
     <dimen name="overview_scroll_scale">0.9</dimen>
 
     <!-- Extra bottom margin for overview TaskViews -->
-    <dimen name="overview_task_extra_top_margin">40dp</dimen>
-    <dimen name="overview_task_extra_bottom_margin">40dp</dimen>
+    <dimen name="overview_task_extra_top_margin">8dp</dimen>
+    <dimen name="overview_task_extra_bottom_margin">0dp</dimen>
 </resources>
