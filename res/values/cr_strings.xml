@@ -423,4 +423,9 @@
     <!-- Force monochrome icons -->
     <string name="pref_force_monochrome_themed_icons_title">Force monochrome icons</string>
     <string name="pref_force_monochrome_themed_icons_summary">Generate monochromatic themed icons, if it is not provided by the app (requires re-toggling of themed icons)</string>
+
+    <!-- Themed icons toggle -->
+    <string name="themed_icons_title">Themed icons</string>
+    <string name="themed_icons_summary_on">Themed icons enabled</string>
+    <string name="themed_icons_summary_off">Themed icons disabled</string>
 </resources>
