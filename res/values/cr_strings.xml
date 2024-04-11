@@ -432,4 +432,9 @@
     <!-- App drawer scrollbar -->
     <string name="drawer_scrollbar_title">Scrollbar</string>
     <string name="drawer_scrollbar_summary">Scrollbar on side of the app drawer</string>
+
+    <!-- Themed icons toggle -->
+    <string name="themed_icons_title">Themed icons</string>
+    <string name="themed_icons_summary_on">Themed icons enabled</string>
+    <string name="themed_icons_summary_off">Themed icons disabled</string>
 </resources>
