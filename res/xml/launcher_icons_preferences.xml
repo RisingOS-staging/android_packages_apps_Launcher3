@@ -30,7 +30,8 @@
     <Preference
         android:key="pref_icon_pack"
         android:title="@string/icon_pack_title"
-        android:layout="@layout/top_level_preference_middle_card" />
+        android:layout="@layout/top_level_preference_middle_card"
+        android:dependency="themed_icons" />
 
     <SwitchPreferenceCompat
         android:key="pref_allapps_themed_icons"
@@ -38,6 +39,7 @@
         android:summary="@string/pref_themed_icons_summary"
         android:persistent="true"
         android:layout="@layout/top_level_preference_middle_card"
+        android:dependency="themed_icons"
         launcher:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
@@ -47,6 +49,7 @@
         android:defaultValue="false"
         android:persistent="true"
         android:layout="@layout/top_level_preference_middle_card"
+        android:dependency="themed_icons"
         launcher:iconSpaceReserved="false" />
 
     <com.android.launcher3.settings.NotificationDotsPreference
