@@ -120,7 +120,7 @@ public final class ThemeIconsSettingsActivity extends CollapsingToolbarBaseActiv
     }
 
     private boolean openSampleUrl() {
-        final String url = "https://github.com/WaifuPX-DG/DGicons/releases";
+        final String url = "https://github.com/LawnchairLauncher/lawnicons/releases";
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
