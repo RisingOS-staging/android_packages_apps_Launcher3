@@ -49,7 +49,8 @@ public class IconDatabase {
             return disabledLabel;
         }
         
-        if (pkgName.trim().toLowerCase().contains("com.android.launcher3")) {
+        if (pkgName.trim().toLowerCase().contains("com.android.launcher3")
+            || pkgName.trim().toLowerCase().contains("com.plus.android.overlay.launcher3")) {
             return defaultLabel;
         }
 
