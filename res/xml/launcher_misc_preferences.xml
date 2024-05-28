@@ -47,10 +47,10 @@
         android:title="@string/background_blur_title"
         android:summary="@string/background_blur_summary"
         android:persistent="true"
-        android:max="125"
+        android:max="100"
         android:min="0"
-        settings:units="px"
-        android:defaultValue="125"
+        settings:units="%"
+        android:defaultValue="75"
         settings:customlayout="@layout/preference_custom_seekbar_middle" />
 
     <androidx.preference.PreferenceScreen
