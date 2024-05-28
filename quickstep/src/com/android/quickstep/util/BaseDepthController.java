@@ -96,7 +96,8 @@ public class BaseDepthController {
 
     public BaseDepthController(Launcher activity) {
         mLauncher = activity;
-        mMaxBlurRadius = Utilities.getBlurRadius(activity);
+        mMaxBlurRadius = (Utilities.getBlurRadius(activity) / 100.0f) * activity.getResources().getDimensionPixelSize(R.dimen.max_depth_blur_radius);
+        Log.d(TAG, "Max Blur Radius: " + mMaxBlurRadius);
         mWallpaperManager = activity.getSystemService(WallpaperManager.class);
 
         MultiPropertyFactory<BaseDepthController> depthProperty =
