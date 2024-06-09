@@ -16,11 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Themed Icons -->
-    <string name="themed_icons_category_title">Themed Icons</string>
-    <string name="themed_icon_pack_disabled">Disabled</string>
-    <string name="icon_pack_no_browser">There\'s no available browser</string>
-
     <!-- Application name -->
     <string name="crdroid_app_name" translatable="false">Ortus Launcher</string>
 
@@ -173,7 +168,7 @@
     <string name="recents_shake_clear_all_title">Shake phone to clear all tasks</string>
 
     <!-- All apps themed icons -->
-    <string name="pref_themed_icons_title">Apply themed icons to app drawer</string>
+    <string name="pref_themed_icons_title">Themed icons in app drawer</string>
     <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
 
     <!-- AppInfo -->
@@ -183,10 +178,6 @@
     <string name="app_info_last_update">Last update</string>
     <string name="app_info_version">Version</string>
     <string name="app_info_more">More</string>
-
-    <!-- Force monochrome icons -->
-    <string name="pref_force_monochrome_themed_icons_title">Force Monochrome themed icons</string>
-    <string name="pref_force_monochrome_themed_icons_summary">Generate monochromatic icons, if it is not provided by the app (requires re-toggling of themed icons)</string>
 
     <!-- Icon pack -->
     <string name="icon_pack_title">Icon pack</string>
@@ -428,4 +419,8 @@
     <!-- Toast for Clear All, App Locked n Unlocked -->
     <string name="action_toast_enabled_title">Action Toasts</string>
     <string name="action_toast_enabled_summary">Enable-disable Toast clear all</string>
+
+    <!-- Force monochrome icons -->
+    <string name="pref_force_monochrome_themed_icons_title">Force monochrome icons</string>
+    <string name="pref_force_monochrome_themed_icons_summary">Generate monochromatic themed icons, if it is not provided by the app (requires re-toggling of themed icons)</string>
 </resources>
