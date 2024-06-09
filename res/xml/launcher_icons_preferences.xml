@@ -24,11 +24,6 @@
         android:title="@string/icon_pack_title"
         android:layout="@layout/top_level_preference_top_card" />
 
-    <Preference
-        android:key="themed_icon_pack"
-        android:title="@string/themed_icons_category_title"
-        android:layout="@layout/top_level_preference_middle_card" />
-
     <SwitchPreferenceCompat
         android:key="pref_allapps_themed_icons"
         android:title="@string/pref_themed_icons_title"
