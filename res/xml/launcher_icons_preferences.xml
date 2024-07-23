@@ -78,7 +78,7 @@
         android:title="@string/icon_two_lines_title"
         android:defaultValue="false"
         android:persistent="true"
-        settings:customlayout="@layout/preference_custom_seekbar_bottom"
+        android:layout="@layout/top_level_preference_bottom_card"
         launcher:iconSpaceReserved="false" />
 
 </androidx.preference.PreferenceScreen>
