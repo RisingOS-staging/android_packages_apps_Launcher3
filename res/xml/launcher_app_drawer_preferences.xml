@@ -32,6 +32,7 @@
         android:title="@string/drawer_scrollbar_title"
         android:summary="@string/drawer_scrollbar_summary"
         android:defaultValue="true"
+        android:layout="@layout/top_level_preference_middle_card"
         launcher:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat

@@ -247,6 +247,7 @@
             android:min="0"
             settings:units="vw"
             android:dependency="pref_dock_search"
+            android:layout="@layout/top_level_preference_middle_card"
             android:defaultValue="0" />
 
         <SwitchPreferenceCompat
