@@ -245,9 +245,6 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             return;
 
         mAttached = false;
-        if (mController != null) {
-            mController.removeListener(this);
-        }
     }
 
     public boolean isPackageEnabled(String pkgName, Context context) {
@@ -289,6 +286,24 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
 
     public void onResume() {
         mController.onResume();
+    }
+    
+    public void onDestroy() {
+        mController.onDestroy();
+        mActionReceiver = null;
+        mController = null;
+        mBubbleTextView = null;
+        mQuickspaceContent = null;
+        mEventSubIcon = null;
+        mNowPlayingIcon = null;
+        mEventTitleSub = null;
+        mEventTitleSubColored = null;
+        mGreetingsExt = null;
+        mGreetingsExtClock = null;
+        mWeatherContentSub = null;
+        mWeatherIconSub = null;
+        mWeatherTempSub = null;
+        mEventTitle = null;
     }
 
     public void setPadding(int n, int n2, int n3, int n4) {
