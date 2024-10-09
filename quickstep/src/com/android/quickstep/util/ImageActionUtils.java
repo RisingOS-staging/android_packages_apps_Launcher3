@@ -57,6 +57,7 @@ import com.android.systemui.shared.recents.model.Task;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
@@ -157,6 +158,44 @@ public class ImageActionUtils {
             persistBitmapAndStartActivity(context, bitmap,
                     crop, intent, ImageActionUtils::getShareIntentForImageUri, tag, sharedElement);
         });
+    }
+
+    @WorkerThread
+    public static boolean startLensSearchActivity(Context context, Bitmap bitmap, Rect crop, String tag) {
+        final boolean[] result = {false};
+        CountDownLatch latch = new CountDownLatch(1);
+        UI_HELPER_EXECUTOR.execute(() -> {
+            if (bitmap == null) {
+                Log.e(tag, "No snapshot available, not starting lens.");
+                latch.countDown();
+                return;
+            }
+            Intent intent = new Intent();
+            Uri uri = getImageUri(bitmap, crop, context, tag);
+            ClipData clipdata = new ClipData(new ClipDescription("content", new String[]{"image/png"}),
+                                             new ClipData.Item(uri));
+            intent.setAction(Intent.ACTION_SEND)
+                    .setComponent(new ComponentName("com.google.android.googlequicksearchbox",
+                            "com.google.android.apps.search.lens.LensShareEntryPointActivity"))
+                    .addFlags(FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                    .addFlags(FLAG_GRANT_READ_URI_PERMISSION)
+                    .setType("image/png")
+                    .putExtra(Intent.EXTRA_STREAM, uri)
+                    .setClipData(clipdata);
+            try {
+                context.startActivity(intent);
+                result[0] = true;
+            } catch (Exception e) {
+                result[0] = false;
+            } finally {
+                latch.countDown();
+            }
+        });
+        try {
+            latch.await();
+        } catch (InterruptedException e) {}
+        return result[0];
     }
 
     /**
