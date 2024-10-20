@@ -206,11 +206,11 @@ public class VibratorWrapper implements SafeCloseable {
     
     public void vibrateForSearchHint() {
         if (mVibrator.areAllPrimitivesSupported(PRIMITIVE_LOW_TICK)) {
-            float startScalePercent = 0.8f;
-            float endScalePercent = 1.2f;
-            int scaleExponent = 2;
-            int iterations = 3;
-            int delay = 100;
+            float startScalePercent = 0.0f;
+            float endScalePercent = 1.0f;
+            int scaleExponent = 1;
+            int iterations = 50;
+            int delay = 0;
             VibrationEffect.Composition startComposition = VibrationEffect.startComposition();
             for (int i = 0; i < iterations; i++) {
                 float progress = i / (float) (iterations - 1);
